@@ -17,14 +17,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* other components */}
-      <Searchbar/>   {/*placeholder*/}
-      
+
+      <Searchbar />
       <CardContainer/>  
 
       
       
-      
+     
 
     </div>
   );
