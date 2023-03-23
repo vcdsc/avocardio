@@ -1,0 +1,20 @@
+/* ---------- cards container ------------ */
+
+.container {
+    width: 80%;
+    column-gap: 5%;
+    height: 600px;
+    height: calc(100vh - 25px);
+    display: flex;
+    position: relative;
+    align-items: center; /* long cards: align-items: normal */
+    justify-content: space-evenly;   
+    padding: 5rem;     
+  
+  }
+  
+ 
+  
+  
+  
+ 
