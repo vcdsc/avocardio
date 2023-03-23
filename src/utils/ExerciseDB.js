@@ -10,6 +10,7 @@ import axios from "axios";
 
 const config = {
   headers: {
+
     "X-RapidAPI-Key": "",
     "X-RapidAPI-Host": "",
   },
