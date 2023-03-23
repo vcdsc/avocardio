@@ -16,10 +16,10 @@ const API = {
         return response.data;
       });
   },
-  getExercisesByBodyPart: function () {
+  getExercisesByBodyPart: function (bodypart) {
     return axios
       .get(
-        `https://exercisedb.p.rapidapi.com/exercises/bodyPart/upper%20arms`,
+        `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodypart}`,
         config
       )
       .then(function (response) {
