@@ -14,7 +14,7 @@ import avocatio from '../../assets/images/avocatio.jpg';
 
 export default function Exercisecard() {
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card sx={{  justifyContent:'center',margin:'5%'}}>
       <CardMedia
         sx={{ height: 400 }}
         component="img"
