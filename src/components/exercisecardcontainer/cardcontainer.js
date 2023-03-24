@@ -11,6 +11,7 @@ export default function CardContainer() {
       sx = {{ flexDirection: {lg:'row', md:'row', sm:'column'},
       marginTop: {lg:'1%', md:'5%', sm:'10%'}
       }}
+      
       style={{
         width: '100%',
         columnGap: '5%',
