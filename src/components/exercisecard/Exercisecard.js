@@ -26,7 +26,7 @@ export default function Exercisecard(props) {
       <CardContent>
 
         <Typography gutterBottom variant="h5" component="div">
-          Exercise Name 
+        {props.name}
         </Typography>
 
         {/* <Typography variant="body2" color="text.secondary">

@@ -12,26 +12,26 @@ const bodyPart = [
 
 function Home() {
 
-    const [exercises, setExercises] = useState([]);
-    const [inputField, setInputField] = useState();
+  const [exercises, setExercises] = useState([]);
+  const [inputField, setInputField] = useState();
   
-    useEffect(() => {
-      // console.log(inputField);
+  useEffect(() => {
+    // console.log(inputField);
   
-      if (inputField !== undefined) {
+    if (inputField !== undefined) {
   
-        API.getExercisesByBodyPart(inputField).then((res) => {
-            setExercises(res); 
-            console.log("Body parts:");
-            console.log(res)
-          });
-        }  
-    }
-    , [inputField]);
+      API.getExercisesByBodyPart(inputField).then((res) => {
+        setExercises(res); 
+        console.log("Body parts:");
+        console.log(res)
+      });
+    }  
+  }
+  , [inputField]);
 
-    const handleClick = () => {
-        setInputField(document.getElementById("combo-box").value); 
-    }
+  const handleClick = () => {
+    setInputField(document.getElementById("combo-box").value); 
+  }
 
   return (
     <div>
@@ -51,17 +51,14 @@ function Home() {
         
          }}>
               
-        <Box sx={{ width:"100%"}}> 
+          {exercises.map( exercise => (
 
-            {exercises.map( exercise => (
+            <Exercisecard {...exercise}/>
+            ))
+          }
 
-                <Exercisecard {...exercise}/>
-                ))
-                }
-              
-            </Box>
         </Grid>
-    
+        
     </div>
   )
 }
