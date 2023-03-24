@@ -12,14 +12,16 @@ import avocatio from '../../assets/images/avocatio.jpg';
 // import Skeleton from '@mui/material/Skeleton';
 // import Stack from '@mui/material/Stack';
 
-export default function Exercisecard() {
+export default function Exercisecard(props) {
   return (
-    <Card sx={{  justifyContent:'center',margin:'5%'}}>
+    <Card 
+    // sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
+    >
       <CardMedia
         sx={{ height: 400 }}
         component="img"
-        image={avocatio}
-        title="avocatio"
+        image={props.gifUrl}
+        title={props.name}
       />
       <CardContent>
 
