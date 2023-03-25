@@ -75,13 +75,14 @@ function Home() {
   }
   , [inputField]);
 
+  // update input field state when the search button is clicked
   const handleClick = () => {
     setInputField(document.getElementById("combo-box").value); 
   }
 
+  // update input field state when the enter key is pressed
   const handleEnter = (e) => {
-
-    console.log(e.key);
+    // if the enter key is pressed
     if (e.key === "enter" || e.keyCode === 13) {
       setInputField(document.getElementById("combo-box").value); 
     }
@@ -89,7 +90,11 @@ function Home() {
 
   return (
     <div>
-        <Searchbar handleClick={handleClick} handleEnter={handleEnter} options={options}/>
+        <Searchbar 
+          handleClick={handleClick}
+          handleEnter={handleEnter} 
+          options={options}
+        />
         
         <Grid container  wrap="nowrap"  columnGap={'5%'} 
             style={{
@@ -102,7 +107,6 @@ function Home() {
                 alignItems: 'center', 
                 justifyContent: 'space-evenly',   
                 padding: '5rem',   
-        
          }}>
               
           {exercises.map( exercise => (
