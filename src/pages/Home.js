@@ -34,21 +34,29 @@ function Home() {
     // if there is a searched item
     if (inputField !== undefined) {
 
-      const search = inputField.replace(" ", "%"); 
+      // const search = inputField.replace(" ", "%"); 
 
       // stores the API call function taking the endpoint name as argument 
       const APICall = (endpoint) => {
 
+        console.log("endpoint is: " + endpoint)
+
+        console.log(`search is: ${endpoint}=${inputField}`)
+
+
         API.getExercises(`${endpoint}=${inputField}`).then((res) => {
+
+
           setExercises(res); 
-          // console.log(res)
+          console.log(res)
         });
       }
+      
 
       // if the item searched is part of the body parts list
       if (bodyPart.includes(inputField)) {
         // uses the body parts endpoint
-        APICall("Body part");
+        APICall("bodyPart");
       }
 
       // if the item searched is part of the body parts list
@@ -71,16 +79,24 @@ function Home() {
     setInputField(document.getElementById("combo-box").value); 
   }
 
+  const handleEnter = (e) => {
+
+    console.log(e.key);
+    if (e.key === "enter" || e.keyCode === 13) {
+      setInputField(document.getElementById("combo-box").value); 
+    }
+  }
+
   return (
     <div>
-        <Searchbar handleClick={handleClick} options={options}/>
+        <Searchbar handleClick={handleClick} handleEnter={handleEnter} options={options}/>
         
         <Grid container  wrap="nowrap"  columnGap={'5%'} 
             style={{
                 width: '100%',
                 columnGap: '5%',
                 height: '600px',
-                height: 'calc(100vh - 25px)',
+                // height: 'calc(100vh - 25px)',
                 display: 'flex',
                 position: 'relative',
                 alignItems: 'center', 
