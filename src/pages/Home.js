@@ -49,17 +49,18 @@ function Home() {
                 justifyContent: 'space-evenly',   
                 padding: '5rem',   
         
-         }}>
+              }}>
               
-        <Box sx={{ width:"100%"}}> 
+            <Box sx={{ width:"100%"}}> 
 
-            {exercises.map( exercise => (
+                {exercises.map( exercise => (
 
                 <Exercisecard {...exercise}/>
-                ))
-                }
+                    ))
+                    }
               
             </Box>
+            
         </Grid>
     
     </div>
