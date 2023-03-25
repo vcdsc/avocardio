@@ -51,7 +51,7 @@ const Creator = styled(Paper)(({ theme }) => ({
         <Creator elevation={12} >
 
             <Stack 
-            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            divider={<Divider color='#009720' orientation="horizontal" flexItem />}>
             <GithubButton>
             <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
             </GithubButton >
@@ -66,7 +66,7 @@ const Creator = styled(Paper)(({ theme }) => ({
         <Creator elevation={12} >
 
             <Stack 
-            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            divider={<Divider color='#009720' orientation="horizontal" flexItem />}>
             <GithubButton>
             <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
             </GithubButton >
@@ -81,7 +81,7 @@ const Creator = styled(Paper)(({ theme }) => ({
         <Creator elevation={12} >
 
             <Stack 
-            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            divider={<Divider color='#009720' orientation="horizontal" flexItem />}>
             <GithubButton>
             <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
             </GithubButton >
@@ -95,7 +95,7 @@ const Creator = styled(Paper)(({ theme }) => ({
         <Creator elevation={12} >
 
             <Stack 
-            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            divider={<Divider color='#009720' orientation="horizontal" flexItem />}>
             <GithubButton>
             <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
             </GithubButton >
