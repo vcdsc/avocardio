@@ -1,0 +1,67 @@
+/* ----------- footer button  ------------ */
+
+
+.custom-btn {     
+
+    background: transparent;
+    transition: all 0.8s ease;
+    position: relative;
+    display: inline-block;
+  
+  
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                      7px 7px 20px 0px rgba(0,0,0,.1),
+                      4px 4px 5px 0px rgba(0,0,0,.1);
+  
+    outline: none;
+  }
+  
+  .btn-footer {
+  
+    background: linear-gradient(0deg, #009720 /* rgba(211,47,47,1) */ 0%, #09581a /* rgba(165,42,42,1) */ 100%);  
+    }  
+  
+    .btn-footer:before,
+    .btn-footer:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: rgba(165,42,42,1) /* rgba(253,75,7,1); */;
+      box-shadow:
+              -7px -7px 20px 0px rgba(255,255,255,.9),
+              -4px -4px 5px 0px rgba(255,255,255,.9),
+               7px 7px 20px 0px rgba(0,0,0,.2),
+               4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.5s ease;
+    }
+  
+    .btn-footer:before{
+       height: 0%;
+       width: 2px;     
+    }
+  
+    .btn-footer:after {
+      width: 0%;
+      height: 2px;
+    }
+  
+    .btn-footer:hover{
+      background: transparent;    
+    } 
+  
+    i:hover{   
+      color: rgba(211,47,47,1) !important; /* rgba(253,75,7,1) !important; */
+    } 
+  
+    .btn-footer:hover:before {
+      height: 100%;
+    }
+  
+    .btn-footer:hover:after {
+      width: 100%;
+      }            
+  
+    
+   /* --------- Footer button end ---------- */
+  

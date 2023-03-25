@@ -109,7 +109,7 @@ function Home() {
                 padding: '5rem',   
          }}>
               
-          {exercises.map( exercise => (
+          {exercises.map(exercise => (
 
             <Exercisecard {...exercise}/>
             ))

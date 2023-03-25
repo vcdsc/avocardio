@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import avocatio from '../../assets/images/avocatio.jpg';
+// import avocatio from '../../assets/images/avocatio.jpg';
 
 // nice to have - skeleton
 // import Box from '@mui/material/Box';
@@ -15,7 +15,7 @@ import avocatio from '../../assets/images/avocatio.jpg';
 export default function Exercisecard(props) {
   return (
     <Card 
-    // sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
+    sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
     >
       <CardMedia
         sx={{ height: 400 }}
