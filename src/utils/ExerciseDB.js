@@ -31,6 +31,13 @@ const API = {
         return response.data.slice(0, 3);
       });
   },
+  getExercises: function (search) {
+    return axios
+      .get(`http://localhost:3000/exercises/?${search}`, config)
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
 };
 
 export default API;
