@@ -3,24 +3,18 @@ import './searchbar.css'
 import { Autocomplete, TextField, Button } from '@mui/material';
 
 
-const bodyPart = [
-    "back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist"
-];
-
-
-function Searchbar({handleClick}) {
-
-  console.log(handleClick)
+function Searchbar({ handleClick, handleEnter, options }) {
 
   return (
     <div className="searchbar">
         <Autocomplete
             disablePortal
             id="combo-box"
-            options={bodyPart}
-            sx={{ width: 300 }}
+            options={options}
+            sx={{ width: 400 }}
             // onChange={(event, value) => setInputField(value)}
-            renderInput={(params) => <TextField {...params} label="Select body parts" size="small" />}
+            renderInput={(params) => <TextField {...params} label="Search by body part, target muscle or equipment" onKeyUp={handleEnter} size="small"  />}
+            
         />
         <Button className="customButton" variant="contained" onClick={handleClick}
 >Search</Button>
