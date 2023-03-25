@@ -20,7 +20,7 @@ const Creator = styled(Paper)(({ theme }) => ({
    margin:20,
    backgroundColor:'aliceblue',
     minHeight: '80px',
-    minWidth:'60px'
+    minWidth:'160px'
    
    
    }));
@@ -47,7 +47,9 @@ const Creator = styled(Paper)(({ theme }) => ({
             >
 
         <ThemeProvider theme={theme}>
+        {/* ---------------------   Author Card 1 ---------------------------------- */}
         <Creator elevation={12} >
+
             <Stack 
             divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
             <GithubButton>
@@ -56,6 +58,51 @@ const Creator = styled(Paper)(({ theme }) => ({
             <Box>GitHub: W-JK</Box>
             <Box>Wojciech J. Koloska</Box>
             </Stack>            
+                      
+         
+        </Creator>
+
+         {/* ---------------------   Author Card 2 ---------------------------------- */}
+        <Creator elevation={12} >
+
+            <Stack 
+            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            <GithubButton>
+            <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
+            </GithubButton >
+            <Box>GitHub: vcdsc</Box>
+            <Box>Vanessa Correia</Box>
+            </Stack>            
+                      
+         
+        </Creator>
+
+        {/* ---------------------   Author Card 3 ---------------------------------- */}
+        <Creator elevation={12} >
+
+            <Stack 
+            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            <GithubButton>
+            <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
+            </GithubButton >
+            <Box>GitHub: marinaongithub </Box>
+            <Box> Marina Theotiste </Box>
+            </Stack>            
+                      
+         
+        </Creator>
+        {/* ---------------------   Author Card 4 ---------------------------------- */}
+        <Creator elevation={12} >
+
+            <Stack 
+            divider={<Divider color='#009720' orientation="hotizontal" flexItem />}>
+            <GithubButton>
+            <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
+            </GithubButton >
+            <Box> GitHub: Sucaad </Box>
+            <Box>Sucaad Kulane </Box>
+            </Stack>            
+                      
          
         </Creator>
            
@@ -63,18 +110,6 @@ const Creator = styled(Paper)(({ theme }) => ({
           </ThemeProvider>
         </Stack>
       ))}
-
-
-
-
-
-
-
-
-
-
-
-
 
       </div>
     );
