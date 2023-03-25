@@ -18,7 +18,7 @@ export default function Exercisecard(props) {
     sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
     >
       <CardMedia
-        sx={{ height: 400 }}
+        // sx={{ height: 400 }}
         component="img"
         image={props.gifUrl}
         title={props.name}
