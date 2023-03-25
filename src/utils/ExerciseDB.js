@@ -30,6 +30,23 @@ const API = {
         return response.data.slice(0, 3);
       });
   },
+  getExercisesByMuscleGroup: function (muscleGroup) {
+    return axios
+      .get(
+        `http://localhost:3010/exercises/?muscleGroup=${muscleGroup}`,
+        config
+      )
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
+  getExercisesByEquipment: function (equipment) {
+    return axios
+      .get(`http://localhost:3010/exercises/?equipment=${equipment}`, config)
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
 };
 
 export default API;
