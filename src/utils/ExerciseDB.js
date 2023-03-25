@@ -10,7 +10,6 @@ import axios from "axios";
 
 const config = {
   headers: {
-
     "X-RapidAPI-Key": "",
     "X-RapidAPI-Host": "",
   },
@@ -19,14 +18,14 @@ const config = {
 const API = {
   getBodyParts: function () {
     return axios
-      .get("http://localhost:3000/bodyPartList", config)
+      .get("http://localhost:3010/bodyPartList", config)
       .then(function (response) {
         return response.data;
       });
   },
   getExercisesByBodyPart: function (bodypart) {
     return axios
-      .get(`http://localhost:3000/exercises/?bodyPart=${bodypart}`, config)
+      .get(`http://localhost:3010/exercises/?bodyPart=${bodypart}`, config)
       .then(function (response) {
         return response.data.slice(0, 3);
       });
