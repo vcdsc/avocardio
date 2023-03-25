@@ -47,24 +47,23 @@ function Home() {
 
       // if the item searched is part of the body parts list
       if (bodyPart.includes(inputField)) {
-
         // uses the body parts endpoint
         APICall("Body part");
       }
 
       // if the item searched is part of the body parts list
       else if (equipment.includes(inputField)) {
-
         // uses the equipment endpoint
         APICall("equipment");
       }
-      else if (muscle.includes(inputField)) {
 
-        // uses the equipment endpoint
+      // if the item searched is part of the muscle list
+      else if (muscle.includes(inputField)) {
+        // uses the target muscle endpoint
         APICall("target");
       }
-
     }  
+    setInputField("")
   }
   , [inputField]);
 

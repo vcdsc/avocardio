@@ -11,7 +11,7 @@ function Searchbar({ handleClick, options }) {
             disablePortal
             id="combo-box"
             options={options}
-            sx={{ width: 300 }}
+            sx={{ width: 400 }}
             // onChange={(event, value) => setInputField(value)}
             renderInput={(params) => <TextField {...params} label="Search by body part, target muscle or equipment" size="small" />}
         />
