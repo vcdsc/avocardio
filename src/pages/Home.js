@@ -105,6 +105,8 @@ function Home() {
   }
 
 
+
+
   return (
     <div>
         <Searchbar 
@@ -113,23 +115,20 @@ function Home() {
           options={options}
         />
         
-        <Grid container  wrap="nowrap"  columnGap={'5%'} 
+        <Grid container  wrap="nowrap"  columnGap={'2%'} rowGap={'2%'}
+        sx = {{ flexDirection: {lg:'row', md:'row', sm:'column', xs:'column'},
+
+        }}
             style={{
-                width: '100%',
-                columnGap: '5%',
-                height: '600px',
-                // height: 'calc(100vh - 25px)',
+                minHeight: '600px',
                 display: 'flex',
-                position: 'relative',
                 alignItems: 'center', 
-                justifyContent: 'space-evenly',   
-                padding: '5rem',   
+                justifyContent: 'center',   
+                padding: '1rem',   
          }}>
               
           {exercises.map(exercise => (
-            <div>
             <Exercisecard {...exercise} />
-            </div>
             ))
           }
 
