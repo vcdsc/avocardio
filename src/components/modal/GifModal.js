@@ -2,8 +2,10 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal'
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
-function GifModal({open, handleClose}) {
+function GifModal({open, handleClose, image, title, equipment, target} ) {
 
     const style = {
         position: 'absolute',
@@ -12,7 +14,7 @@ function GifModal({open, handleClose}) {
         transform: 'translate(-50%, -50%)',
         width: 400,
         bgcolor: 'background.paper',
-        border: '2px solid #000',
+        border: '1px solid #000',
         boxShadow: 24,
         p: 4,
       };  
@@ -26,12 +28,20 @@ function GifModal({open, handleClose}) {
             aria-describedby="modal-modal-description"
             >
         <Box sx={style}>
+            <CardMedia
+            // sx={{ height: 400 }}
+            component="img"
+            image={image}
+            title={title}
+            />
             <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            <strong><i>{title.charAt(0).toUpperCase() + title.slice(1)}</i></strong>
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            <Typography id="modal-modal-description" sx={{ mt: 2 }} equipment={equipment} target={target}>
+                <p>This exercise targets the <strong>{target}</strong></p>
+                <p><strong>Equipment needed: </strong>{equipment}</p>
             </Typography>
+            
         </Box>
         </Modal>
     </div>

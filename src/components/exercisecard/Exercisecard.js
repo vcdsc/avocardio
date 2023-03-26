@@ -16,7 +16,7 @@ import GifModal from '../modal/GifModal.js'
 export default function Exercisecard(props) {
 
   const [open, setOpen] = useState(false);
-  
+
   const handleOpen = (e) => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -48,7 +48,14 @@ export default function Exercisecard(props) {
         <Button size="small" cursor="pointer" onClick={handleOpen}>Learn More</Button>
       </CardActions>
     </Card>
-    <GifModal open={open} handleClose={handleClose}/>
+    <GifModal 
+      open={open} 
+      handleClose={handleClose} 
+      image={props.gifUrl}
+      title={props.name}
+      equipment={props.equipment}
+      target={props.target}
+      />
     </div>
   );
 }
