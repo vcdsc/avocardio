@@ -4,6 +4,7 @@ import Exercisecard from '../components/exercisecard/Exercisecard'
 import Grid from '@mui/material/Grid'
 import API from '../utils/ExerciseDB.js'
 
+
 // body parts options
 const bodyParts = [
   "back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist"
@@ -103,6 +104,7 @@ function Home() {
     }
   }
 
+
   return (
     <div>
         <Searchbar 
@@ -125,8 +127,9 @@ function Home() {
          }}>
               
           {exercises.map(exercise => (
-
-            <Exercisecard {...exercise}/>
+            <div>
+            <Exercisecard {...exercise} />
+            </div>
             ))
           }
 
