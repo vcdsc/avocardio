@@ -21,18 +21,18 @@ export default function Exercisecard(props) {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
     <Card 
-    sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
+    sx={{ display: 'flex', flexDirection: 'column', maxHeight: '600px', maxWidth: '400px', marginBottom: '10px',  minWidth: '300px', minHeight: '560px', }}
     >
       <CardMedia
-        // sx={{ height: 400 }}
+        sx={{ height:'380px'}}
         component="img"
         image={props.gifUrl}
         title={props.name}
       />
-      <CardContent>
-
+      <CardContent
+        sx={{ height:'90px'}}
+        >
         <Typography gutterBottom variant="h5" component="div">
         {props.name}
         </Typography>
@@ -46,16 +46,15 @@ export default function Exercisecard(props) {
       <CardActions>
         {/*<Button size="small">Share</Button> */}
         <Button size="small" cursor="pointer" onClick={handleOpen}>Learn More</Button>
+        <GifModal 
+        open={open} 
+        handleClose={handleClose} 
+        image={props.gifUrl}
+        title={props.name}
+        equipment={props.equipment}
+        target={props.target}
+        />
       </CardActions>
     </Card>
-    <GifModal 
-      open={open} 
-      handleClose={handleClose} 
-      image={props.gifUrl}
-      title={props.name}
-      equipment={props.equipment}
-      target={props.target}
-      />
-    </div>
   );
 }
