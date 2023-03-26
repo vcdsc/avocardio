@@ -14,9 +14,9 @@ import {
   Box,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import { Link } from 'react-router-dom';
 import About from './pages/About';
+import logo from '../Image/Avocardio.png';
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -39,15 +39,13 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
+          <img
+            src={logo}
+            alt="logo"
+            width="70"
+            height="70"
             sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            <SportsMartialArtsIcon />
-          </IconButton>
+          />
           <Typography
             variant="h6"
             component="div"
@@ -68,10 +66,8 @@ const Navbar = () => {
           </Typography>
           {!isMobile && (
             <Button
-              variant="outlined"
               sx={{
                 color: 'brown',
-                borderColor: 'brown',
                 '&:hover': {
                   color: 'white',
                   bgcolor: 'brown',
