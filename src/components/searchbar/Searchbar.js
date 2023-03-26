@@ -1,29 +1,24 @@
 import React from 'react'
 import './searchbar.css'
-import { Autocomplete, TextField, Button } from '@mui/material';
+import { Autocomplete, TextField, Button, } from '@mui/material'
 
 
-const bodyPart = [
-    "back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist"
-];
-
-
-function Searchbar({handleClick}) {
-
-  console.log(handleClick)
+function Searchbar({ handleClick, handleEnter, options }) {
 
   return (
     <div className="searchbar">
         <Autocomplete
             disablePortal
             id="combo-box"
-            options={bodyPart}
-            sx={{ width: 300 }}
+            options={options}
+            groupBy={(option) => option.type}
+            getOptionLabel={(option) => option.name}
+            sx={{ width: 450,}}
             // onChange={(event, value) => setInputField(value)}
-            renderInput={(params) => <TextField {...params} label="Select body parts" size="small" />}
+            renderInput={(params) => <TextField {...params} id="inputField" label="Search by body part, target muscle or equipment" onKeyUp={handleEnter} size="small" />}
+            
         />
-        <Button className="customButton" variant="contained" onClick={handleClick}
->Search</Button>
+        <Button className="customButton" variant="contained" onClick={handleClick}>Search</Button>
 
     </div>
   )

@@ -1,12 +1,13 @@
 .searchbar {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    margin: 35px 0px 20px 10px ;
 }
 
 .customButton {
     text-transform: none !important;
-    margin-left: 10px !important;
-    height: 39px;
+    margin: 10px !important;
+    height: 38px;
     background-color: brown !important;
 }
