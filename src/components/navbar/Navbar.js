@@ -15,6 +15,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import { Link } from 'react-router-dom';
+import About from './pages/About';
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -45,6 +46,11 @@ const Navbar = () => {
           >
             <span style={{ marginLeft: "5px" }}>Avocardio</span>
           </Typography>
+          {!isMobile && (
+            <Button color="inherit" component={Link} to="/About">
+              About Us
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
       {isMobile ? (
