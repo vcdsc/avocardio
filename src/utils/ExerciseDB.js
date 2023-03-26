@@ -49,7 +49,7 @@ const API = {
   },
   getExercises: function (search) {
     return axios
-      .get(`http://localhost:3000/exercises/?${search}`, config)
+      .get(`http://localhost:3010/exercises/?${search}`, config)
       .then(function (response) {
         return response.data.slice(0, 3);
       });

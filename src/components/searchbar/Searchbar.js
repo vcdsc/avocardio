@@ -1,6 +1,6 @@
 import React from 'react'
 import './searchbar.css'
-import { Autocomplete, TextField, Button } from '@mui/material';
+import { Autocomplete, TextField, Button, } from '@mui/material'
 
 
 function Searchbar({ handleClick, handleEnter, options }) {
@@ -11,13 +11,14 @@ function Searchbar({ handleClick, handleEnter, options }) {
             disablePortal
             id="combo-box"
             options={options}
+            groupBy={(option) => option.type}
+            getOptionLabel={(option) => option.name}
             sx={{ width: 400 }}
             // onChange={(event, value) => setInputField(value)}
             renderInput={(params) => <TextField {...params} label="Search by body part, target muscle or equipment" onKeyUp={handleEnter} size="small"  />}
             
         />
-        <Button className="customButton" variant="contained" onClick={handleClick}
->Search</Button>
+        <Button className="customButton" variant="contained" onClick={handleClick}>Search</Button>
 
     </div>
   )

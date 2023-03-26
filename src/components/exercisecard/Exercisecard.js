@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import GifModal from '../modal/GifModal.js'
 // import avocatio from '../../assets/images/avocatio.jpg';
 
 // nice to have - skeleton
@@ -13,12 +14,19 @@ import Typography from '@mui/material/Typography';
 // import Stack from '@mui/material/Stack';
 
 export default function Exercisecard(props) {
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = (e) => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
+    <div>
     <Card 
     sx={{  justifyContent:'center',margin:'5%',maxWidth:'200px', maxHeight:'400px'}}
     >
       <CardMedia
-        sx={{ height: 400 }}
+        // sx={{ height: 400 }}
         component="img"
         image={props.gifUrl}
         title={props.name}
@@ -37,8 +45,17 @@ export default function Exercisecard(props) {
 
       <CardActions>
         {/*<Button size="small">Share</Button> */}
-        <Button size="small" cursor="pointer" >Learn More</Button>
+        <Button size="small" cursor="pointer" onClick={handleOpen}>Learn More</Button>
       </CardActions>
     </Card>
+    <GifModal 
+      open={open} 
+      handleClose={handleClose} 
+      image={props.gifUrl}
+      title={props.name}
+      equipment={props.equipment}
+      target={props.target}
+      />
+    </div>
   );
 }
