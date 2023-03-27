@@ -4,13 +4,17 @@ import AvocardioLogo from '../../Image/Avocardio.png';
 const About = ({ title }) => {
   const containerStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+    gridTemplateColumns: '1fr',
     gridGap: '20px',
     padding: '20px',
-    backgroundColor: '#e6f2e6',
+    backgroundColor: '#d2f5d2',
     borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    width: '100%',
+    maxWidth: '1200px', 
+    margin: '0 auto'
   };
+  
 
   const imageContainerStyle = {
     display: 'flex',
@@ -24,15 +28,19 @@ const About = ({ title }) => {
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
   };
-  
+
   const textStyle = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start',
-    textAlign: 'left',
-    color: '#444'
+    alignItems: 'center',
+    textAlign: 'center',
+    color: '#444',
+    fontSize: '1.2rem',
+    lineHeight: '1.5'
   };
+  
+  
 
   const headingStyle = {
     fontSize: '36px',
