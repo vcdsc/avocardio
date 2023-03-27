@@ -1,10 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
-
 import Navbar from './components/navbar/Navbar';
 // import Searchbar from './components/searchbar/Searchbar'
 // import CardContainer from './components/exercisecardcontainer/cardcontainer'
 import Home from './pages/Home';
+import About from './components/navbar/pages/About'
 import Footer from './components/footer/Footer';
+
+
+
 
 
 function App() {
@@ -13,15 +17,16 @@ function App() {
   // console.log(API.getExercisesByBodyPart());
 
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-
-      {/* <Searchbar />
-      <CardContainer/>   */}
-      <Footer/> 
-
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
