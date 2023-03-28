@@ -34,7 +34,7 @@ const Creator = styled(Paper)(({ theme }) => ({
 // ------------------------------ Footer ----------------------------------------------------------------
   export default function Footer() {
     return (
-      <div>
+      <div style={{ position: 'fixed', bottom: 0, width: '100%' }}>
         
 
       {[lightTheme,].map((theme, index) => (
