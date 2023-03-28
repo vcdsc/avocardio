@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import GifModal from "../modal/GifModal.js";
-// import avocatio from '../../assets/images/avocatio.jpg';
 import ReactFreezeframe from "react-freezeframe";
 
 // nice to have - skeleton
