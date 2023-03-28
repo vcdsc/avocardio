@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: 'white' }}>
+      <AppBar position="static" sx={{ bgcolor: '#7FB069' }}>
         <Toolbar sx={{ color: 'brown', justifyContent: 'space-between' }}>
           <Stack direction="row" spacing={2} alignItems="center">
             {isMobile ? (
@@ -50,7 +50,7 @@ const Navbar = () => {
               sx={{ display: { xs: 'none', sm: 'block' } }}
             />
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <Typography variant="h6" sx={{ color: 'brown' }}>
+              <Typography variant="h6" sx={{ color: 'white' }}>
                 Avocardio
               </Typography>
             </Link>
@@ -58,10 +58,10 @@ const Navbar = () => {
           {!isMobile && (
             <Button
               sx={{
-                color: 'brown',
+                color: 'white',
                 '&:hover': {
                   color: 'white',
-                  bgcolor: 'brown',
+                  bgcolor: 'green',
                 },
               }}
               component={Link}
