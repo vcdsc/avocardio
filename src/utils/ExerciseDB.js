@@ -1,55 +1,51 @@
 import axios from "axios";
 
-// This is just so we do not need to repeat the full headers every time.
-// const config = {
-//   headers: {
-//     "X-RapidAPI-Key": "6f5b539b57msh0b7a1cfc8bbb294p1e1a40jsndd2475bad2c3",
-//     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
-//   },
-// };
+const URL =
+  process.env.REACT_APP_API_URL || "https://exercisedb.p.rapidapi.com";
 
+console.log("Which resource are we using?", URL);
+
+// ===> Connect to ExerciseDB
+// This is just so we do not need to repeat the full headers every time.
 const config = {
   headers: {
-    "X-RapidAPI-Key": "",
-    "X-RapidAPI-Host": "",
+    "X-RapidAPI-Key": "f6894131afmshd4f00db74ae6c7fp108c0ejsn5d663a0ec655",
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
 
 const API = {
-  getBodyParts: function () {
-    return axios
-      .get("http://localhost:3010/bodyPartList", config)
-      .then(function (response) {
-        return response.data;
-      });
-  },
-  getExercisesByBodyPart: function (bodypart) {
-    return axios
-      .get(`http://localhost:3010/exercises/?bodyPart=${bodypart}`, config)
-      .then(function (response) {
-        return response.data.slice(0, 3);
-      });
-  },
-  getExercisesByMuscleGroup: function (muscleGroup) {
-    return axios
-      .get(
-        `http://localhost:3010/exercises/?muscleGroup=${muscleGroup}`,
-        config
-      )
-      .then(function (response) {
-        return response.data.slice(0, 3);
-      });
-  },
-  getExercisesByEquipment: function (equipment) {
-    return axios
-      .get(`http://localhost:3010/exercises/?equipment=${equipment}`, config)
-      .then(function (response) {
-        return response.data.slice(0, 3);
-      });
-  },
+  // getBodyParts: function () {
+  //   return axios
+  //     .get(`${URL}/exercises/bodyPartList`, config)
+  //     .then(function (response) {
+  //       return response.data;
+  //     });
+  // },
+  // getExercisesByBodyPart: function (bodyPart) {
+  //   return axios
+  //     .get(`${URL}/exercises/bodyPart/${bodyPart}`, config)
+  //     .then(function (response) {
+  //       return response.data.slice(0, 3);
+  //     });
+  // },
+  // getExercisesByMuscleGroup: function (muscleGroup) {
+  //   return axios
+  //     .get(`${URL}/exercises/muscleGroup/${muscleGroup}`, config)
+  //     .then(function (response) {
+  //       return response.data.slice(0, 3);
+  //     });
+  // },
+  // getExercisesByEquipment: function (equipment) {
+  //   return axios
+  //     .get(`${URL}/exercises/equipment/${equipment}`, config)
+  //     .then(function (response) {
+  //       return response.data.slice(0, 3);
+  //     });
+  // },
   getExercises: function (search) {
     return axios
-      .get(`http://localhost:3010/exercises/?${search}`, config)
+      .get(`${URL}/exercises/${search}`, config)
       .then(function (response) {
         return response.data.slice(0, 3);
       });
