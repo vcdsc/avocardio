@@ -31,7 +31,6 @@ const lightTheme = createTheme({ palette: { mode: "light" } });
 export default function Footer() {
   return (
     <div>
-      {/* style={{ position: "fixed", bottom: 0, width: "100%" }} */}
       {[lightTheme].map((theme, index) => (
         <Stack
           direction={{ xs: "column", sm: "row" }}

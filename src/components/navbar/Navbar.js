@@ -27,8 +27,8 @@ const Navbar = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <>
-      <AppBar position="static" sx={{ bgcolor: "greenyellow" }}>
+    <div>
+      <AppBar position="static" sx={{ bgcolor: "greenyellow", flexGrow: 1 }}>
         <Toolbar sx={{ color: "brown", justifyContent: "space-between" }}>
           <Stack direction="row" spacing={2} alignItems="center">
             {isMobile ? (
@@ -89,7 +89,7 @@ const Navbar = () => {
           )}
         </Toolbar>
       </AppBar>
-    </>
+    </div>
   );
 };
 

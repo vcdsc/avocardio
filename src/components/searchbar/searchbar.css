@@ -7,7 +7,7 @@
 
 .customButton {
     text-transform: none !important;
-    margin: 10px !important;
+    margin-left: 10px !important;
     height: 38px;
     background-color: brown !important;
 }

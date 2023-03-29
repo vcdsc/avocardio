@@ -97,11 +97,15 @@ const musclesObj = muscles.map((muscle) => {
 // concatenate content of all objects
 const options = [...bodyPartsObj, ...equipmentsObj, ...musclesObj];
 
+const quotes = "Don't be a couch potato, be an avo-cardio enthusiast!, ";
 function Home() {
+
+  const [quote, setQuote] = useState(quotes);
   const [exercises, setExercises] = useState([]);
   const [inputField, setInputField] = useState();
 
   useEffect(() => {
+
     // if there is a searched item
     if (inputField !== undefined) {
       // const search = inputField.replace(" ", "%");
@@ -135,6 +139,7 @@ function Home() {
 
   // update input field state when the search button is clicked
   const handleClick = () => {
+    setQuote("")
     setInputField(document.getElementById("combo-box").value);
   };
 
@@ -146,8 +151,29 @@ function Home() {
     }
   };
 
+  if (quote !== "") {
+    return (
+      <div style={{flexGrow: 1, display: "flex", flexDirection: "column"}}>
+        <Searchbar
+        handleClick={handleClick}
+        handleEnter={handleEnter}
+        options={options} 
+        />
+        <div 
+        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto"}}
+        >
+          <p>
+          <strong>{quote}</strong>
+          </p>
+        </div>
+      </div> 
+    )
+
+  }
+
+  else {
   return (
-    <div>
+    <div style={{flexGrow: 1}}>
       <Searchbar
         handleClick={handleClick}
         handleEnter={handleEnter}
@@ -156,7 +182,7 @@ function Home() {
 
       <Grid
         container
-        wrap="nowrap"
+        // wrap="nowrap"
         columnGap={"2%"}
         rowGap={"2%"}
         sx={{
@@ -173,9 +199,11 @@ function Home() {
         {exercises.map((exercise) => (
           <Exercisecard {...exercise} key={exercise.id} />
         ))}
+ 
       </Grid>
     </div>
   );
+}
 }
 
 export default Home;
