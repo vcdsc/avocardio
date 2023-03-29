@@ -122,7 +122,7 @@ function Home() {
 
       // stores the API call function taking the endpoint name as argument
       const APICall = (endpoint) => {
-        API.getExercises(`${endpoint}=${inputField}`).then((res) => {
+        API.getExercises(`${endpoint}/${inputField}`).then((res) => {
           setExercises(res);
         });
       };
