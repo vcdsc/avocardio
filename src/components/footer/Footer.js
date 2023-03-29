@@ -20,10 +20,10 @@ const Creator = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
   padding: 10,
-  margin: 20,
+  margin: 20 ,
   // backgroundColor: "aliceblue",
   minHeight: "80px",
-  minWidth: "160px",
+  minWidth: "171px",
 }));
 
 const lightTheme = createTheme({ palette: { mode: "light" } });
