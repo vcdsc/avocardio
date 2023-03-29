@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const URL =
-  process.env.REACT_APP_API_URL || "https://exercisedb.p.rapidapi.com";
+// const URL =
+//   process.env.REACT_APP_API_URL || "https://exercisedb.p.rapidapi.com";
+
+const URL = "https://exercisedb.p.rapidapi.com";
 
 console.log("Which resource are we using?", URL);
 
@@ -15,34 +17,34 @@ const config = {
 };
 
 const API = {
-  // getBodyParts: function () {
-  //   return axios
-  //     .get(`${URL}/exercises/bodyPartList`, config)
-  //     .then(function (response) {
-  //       return response.data;
-  //     });
-  // },
-  // getExercisesByBodyPart: function (bodyPart) {
-  //   return axios
-  //     .get(`${URL}/exercises/bodyPart/${bodyPart}`, config)
-  //     .then(function (response) {
-  //       return response.data.slice(0, 3);
-  //     });
-  // },
-  // getExercisesByMuscleGroup: function (muscleGroup) {
-  //   return axios
-  //     .get(`${URL}/exercises/muscleGroup/${muscleGroup}`, config)
-  //     .then(function (response) {
-  //       return response.data.slice(0, 3);
-  //     });
-  // },
-  // getExercisesByEquipment: function (equipment) {
-  //   return axios
-  //     .get(`${URL}/exercises/equipment/${equipment}`, config)
-  //     .then(function (response) {
-  //       return response.data.slice(0, 3);
-  //     });
-  // },
+  getBodyParts: function () {
+    return axios
+      .get(`${URL}/exercises/bodyPartList`, config)
+      .then(function (response) {
+        return response.data;
+      });
+  },
+  getExercisesByBodyPart: function (bodyPart) {
+    return axios
+      .get(`${URL}/exercises/bodyPart/${bodyPart}`, config)
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
+  getExercisesByMuscleGroup: function (muscleGroup) {
+    return axios
+      .get(`${URL}/exercises/target/${muscleGroup}`, config)
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
+  getExercisesByEquipment: function (equipment) {
+    return axios
+      .get(`${URL}/exercises/equipment/${equipment}`, config)
+      .then(function (response) {
+        return response.data.slice(0, 3);
+      });
+  },
   getExercises: function (search) {
     return axios
       .get(`${URL}/exercises/${search}`, config)
