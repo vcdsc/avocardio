@@ -161,7 +161,7 @@ function Home() {
     }
   };
 
-  // Render motivational quotes if no exercises searched
+  // Renders motivational quotes if no exercises searched
   if (quote !== "") {
     return (
       <div style={{flexGrow: 1, display: "flex", flexDirection: "column",}}>
@@ -171,9 +171,10 @@ function Home() {
         options={options} 
         />
         <div id="quote"
-        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto", color: "#618161", padding: "0px 5px 0px 5px", fontSize: "30px", }}
+        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto", color: "#618161", padding: "0px 10px 0px 10px", fontSize: "30px", fontWeight: "bold", fontStyle: "italic",            
+      }}
         >
-          <p>
+          <p style={{ padding: "0px 80px"}}>
           {quote}
           </p>
         </div>

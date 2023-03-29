@@ -25,9 +25,9 @@ export default function Exercisecard(props) {
         display: "flex",
         flexDirection: "column",
         maxHeight: "600px",
-        maxWidth: "400px",
+        maxWidth: "360px",
         marginBottom: "10px",
-        minWidth: "300px",
+        // minWidth: "300px",
         minHeight: "560px",
       }}
     >
@@ -35,6 +35,7 @@ export default function Exercisecard(props) {
         // sx={{ height: "380px" }}
         // component="img"
         // image={props.gifUrl}
+        sx={{ flexGrow: 1, }}
         title={props.name}
         key={props.id}
       />
@@ -50,7 +51,9 @@ export default function Exercisecard(props) {
       </CardContent>
       <CardActions>
         {/*<Button size="small">Share</Button> */}
-        <Button size="small" cursor="pointer" onClick={handleOpen}>
+        <Button size="small" cursor="pointer" onClick={handleOpen} 
+        // style={{justifyContent: "right"}}
+        >
           Learn More
         </Button>
         <GifModal

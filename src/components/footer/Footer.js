@@ -16,14 +16,15 @@ import Divider from "@mui/material/Divider";
 // ------------------------- Creator ---------------------------------------- //
 const Creator = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
-  lineHeight: "60px",
+  lineHeight: "35px",
   textAlign: "center",
   color: theme.palette.text.secondary,
   padding: 10,
-  margin: 20 ,
   // backgroundColor: "aliceblue",
-  minHeight: "80px",
-  minWidth: "171px",
+  height: "90px",
+  // minWidth: "140",
+  width: "150px",
+  fontSize: "10px"
 }));
 
 const lightTheme = createTheme({ palette: { mode: "light" } });
@@ -38,7 +39,8 @@ export default function Footer() {
           alignItems="center"
           spacing={{ xs: 1, sm: 2, md: 4 }}
           backgroundColor="#618161"
-          borderTop={{ color: "#009720", xs: 1, sm: 2, md: 4 }}
+          // borderTop={{ color: "#009720", xs: 1, sm: 2, md: 4 }}
+          padding="10px"
         >
           <ThemeProvider theme={theme}>
             {/* ---------------------   Author Card 1 ---------------------------------- */}
@@ -57,7 +59,7 @@ export default function Footer() {
                     />
                   }
                 >
-                  <GithubButton></GithubButton>
+                  {/* <GithubButton></GithubButton> */}
 
                   <Box>GitHub: W-JK</Box>
                   <Box>Wojciech J. Koloska</Box>
@@ -81,9 +83,9 @@ export default function Footer() {
                     />
                   }
                 >
-                  <GithubButton>
+                  {/* <GithubButton>
                     <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
-                  </GithubButton>
+                  </GithubButton> */}
                   <Box>GitHub: vcdsc</Box>
                   <Box>Vanessa Correia</Box>
                 </Stack>
@@ -106,11 +108,11 @@ export default function Footer() {
                     />
                   }
                 >
-                  <GithubButton>
+                  {/* <GithubButton>
                     <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
-                  </GithubButton>
-                  <Box>GitHub: marinaongithub </Box>
-                  <Box> Marina Theotiste </Box>
+                  </GithubButton> */}
+                  <Box>GitHub: marinaongithub</Box>
+                  <Box>Marina Theotiste</Box>
                 </Stack>
               </a>
             </Creator>
@@ -130,9 +132,9 @@ export default function Footer() {
                     />
                   }
                 >
-                  <GithubButton>
+                  {/* <GithubButton>
                     <FontAwesomeIcon icon="fab fa-github" size="lg" /> GitHub
-                  </GithubButton>
+                  </GithubButton> */}
                   <Box> GitHub: Sucaad </Box>
                   <Box>Sucaad Kulane </Box>
                 </Stack>

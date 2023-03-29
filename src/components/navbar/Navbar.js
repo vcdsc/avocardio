@@ -59,10 +59,10 @@ const Navbar = () => {
             <Button
               sx={{
                 color: "white",
-                "&:hover": {
-                  color: "white",
-                  bgcolor: "green",
-                },
+                // "&:hover": {
+                //   color: "white",
+                //   bgcolor: "green",
+                // },
               }}
               component={Link}
               to="/about"
