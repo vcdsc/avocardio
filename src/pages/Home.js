@@ -97,11 +97,25 @@ const musclesObj = muscles.map((muscle) => {
 // concatenate content of all objects
 const options = [...bodyPartsObj, ...equipmentsObj, ...musclesObj];
 
+// generates random motivational quotes
+const randomQuotes = () => {
+
+  const quotes =["Don't be a couch potato, be an avo-cardio enthusiast!", 
+  "Sweat now, guac later. Let Avocardio be your fitness partner in crime!", 
+  "Avocardio: where the guac is extra, but so is your energy!", 
+  "They say an apple a day keeps the doctor away, but with Avocardio, you'll be able to outrun them too!"];
+  
+  return quotes[Math.floor(Math.random()*quotes.length)];
+}
+
 function Home() {
+
+  const [quote, setQuote] = useState(randomQuotes);
   const [exercises, setExercises] = useState([]);
   const [inputField, setInputField] = useState();
 
   useEffect(() => {
+
     // if there is a searched item
     if (inputField !== undefined) {
       // const search = inputField.replace(" ", "%");
@@ -135,6 +149,7 @@ function Home() {
 
   // update input field state when the search button is clicked
   const handleClick = () => {
+    setQuote("")
     setInputField(document.getElementById("combo-box").value);
   };
 
@@ -146,8 +161,31 @@ function Home() {
     }
   };
 
+  // Renders motivational quotes if no exercises searched
+  if (quote !== "") {
+    return (
+      <div style={{flexGrow: 1, display: "flex", flexDirection: "column",}}>
+        <Searchbar
+        handleClick={handleClick}
+        handleEnter={handleEnter}
+        options={options} 
+        />
+        <div id="quote"
+        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto", color: "#618161", padding: "0px 10px 0px 10px", fontSize: "30px", fontWeight: "bold", fontStyle: "italic",            
+      }}
+        >
+          <p style={{ padding: "0px 80px"}}>
+          {quote}
+          </p>
+        </div>
+      </div> 
+    )
+
+  }
+
+  else {
   return (
-    <div>
+    <div style={{flexGrow: 1}}>
       <Searchbar
         handleClick={handleClick}
         handleEnter={handleEnter}
@@ -156,7 +194,7 @@ function Home() {
 
       <Grid
         container
-        wrap="nowrap"
+        // wrap="nowrap"
         columnGap={"2%"}
         rowGap={"2%"}
         sx={{
@@ -173,9 +211,11 @@ function Home() {
         {exercises.map((exercise) => (
           <Exercisecard {...exercise} key={exercise.id} />
         ))}
+ 
       </Grid>
     </div>
   );
+}
 }
 
 export default Home;

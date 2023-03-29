@@ -27,8 +27,8 @@ const Navbar = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <>
-      <AppBar position="static" sx={{ bgcolor: "greenyellow" }}>
+    <div>
+      <AppBar position="static" sx={{ bgcolor: "#618161", flexGrow: 1 }}>
         <Toolbar sx={{ color: "brown", justifyContent: "space-between" }}>
           <Stack direction="row" spacing={2} alignItems="center">
             {isMobile ? (
@@ -59,10 +59,10 @@ const Navbar = () => {
             <Button
               sx={{
                 color: "white",
-                "&:hover": {
-                  color: "white",
-                  bgcolor: "green",
-                },
+                // "&:hover": {
+                //   color: "white",
+                //   bgcolor: "green",
+                // },
               }}
               component={Link}
               to="/about"
@@ -89,7 +89,7 @@ const Navbar = () => {
           )}
         </Toolbar>
       </AppBar>
-    </>
+    </div>
   );
 };
 

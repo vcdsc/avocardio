@@ -1,8 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
+#quote:hover {
+  color: #616161 !important;
 
+}
