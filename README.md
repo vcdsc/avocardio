@@ -43,7 +43,7 @@ Since we achieved our initial MVP fairly quickly, we decided to introduce some a
 - [![Axios](https://img.shields.io/badge/Axios-purple)](https://axios-http.com/)
 - [![ExerciseDB API](https://img.shields.io/badge/ExerciseDB-grey)](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 - [![MUI](https://img.shields.io/badge/Material%20UI-blue)](https://mui.com/)
-- [![Animate.css](https://img.shields.io/badge/Animate.css-orange)](https://animate.style/)
+<!-- - [![Animate.css](https://img.shields.io/badge/Animate.css-orange)](https://animate.style/) -->
 
 ## Running the project locally
 
@@ -55,7 +55,7 @@ Finally, run `npm start` to run the project in development mode and you should b
 
 ## Live
 
-Deployed version of this project can be seen [here]().
+Deployed version of this project can be seen [here](https://sparkling-jalebi-c54467.netlify.app/).
 
 ## Project Presentation
 
