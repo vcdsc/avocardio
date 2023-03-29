@@ -97,9 +97,14 @@ const musclesObj = muscles.map((muscle) => {
 // concatenate content of all objects
 const options = [...bodyPartsObj, ...equipmentsObj, ...musclesObj];
 
+// generates random motivational quotes
 const randomQuotes = () => {
 
-  const quotes =["Don't be a couch potato, be an avo-cardio enthusiast!", "Sweat now, guac later. Let Avocardio be your fitness partner in crime!", "Avocardio: where the guac is extra, but so is your energy!", "There's no better feeling than finishing a tough workout, except maybe smashing a ripe avocado after. Join Avocardio and experience both!", "They say an apple a day keeps the doctor away, but with Avocardio, you'll be able to outrun them too!"];
+  const quotes =["Don't be a couch potato, be an avo-cardio enthusiast!", 
+  "Sweat now, guac later. Let Avocardio be your fitness partner in crime!", 
+  "Avocardio: where the guac is extra, but so is your energy!", 
+  "They say an apple a day keeps the doctor away, but with Avocardio, you'll be able to outrun them too!"];
+  
   return quotes[Math.floor(Math.random()*quotes.length)];
 }
 
@@ -159,17 +164,17 @@ function Home() {
   // Render motivational quotes if no exercises searched
   if (quote !== "") {
     return (
-      <div style={{flexGrow: 1, display: "flex", flexDirection: "column"}}>
+      <div style={{flexGrow: 1, display: "flex", flexDirection: "column",}}>
         <Searchbar
         handleClick={handleClick}
         handleEnter={handleEnter}
         options={options} 
         />
-        <div 
-        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto"}}
+        <div id="quote"
+        style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column", margin: "auto", color: "#618161", padding: "0px 5px 0px 5px", fontSize: "30px", }}
         >
           <p>
-          <strong>{quote}</strong>
+          {quote}
           </p>
         </div>
       </div> 

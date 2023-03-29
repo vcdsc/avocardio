@@ -37,7 +37,7 @@ export default function Footer() {
           justifyContent="center"
           alignItems="center"
           spacing={{ xs: 1, sm: 2, md: 4 }}
-          // backgroundColor="aliceblue"
+          backgroundColor="#618161"
           borderTop={{ color: "#009720", xs: 1, sm: 2, md: 4 }}
         >
           <ThemeProvider theme={theme}>

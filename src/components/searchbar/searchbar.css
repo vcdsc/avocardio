@@ -2,12 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 35px 0px 20px 10px ;
+    margin: 35px 10px 20px 10px ;
+}
+
+.MuiAutocomplete-root {
+    background-color: white !important;
 }
 
 .customButton {
     text-transform: none !important;
     margin-left: 10px !important;
     height: 38px;
-    background-color: brown !important;
+    background-color: #e07832 !important;
 }

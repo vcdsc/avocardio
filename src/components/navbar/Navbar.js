@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static" sx={{ bgcolor: "greenyellow", flexGrow: 1 }}>
+      <AppBar position="static" sx={{ bgcolor: "#618161", flexGrow: 1 }}>
         <Toolbar sx={{ color: "brown", justifyContent: "space-between" }}>
           <Stack direction="row" spacing={2} alignItems="center">
             {isMobile ? (
