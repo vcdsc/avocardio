@@ -14,7 +14,7 @@ Search results are return in GIF format, that the user can easily follow along.
 
 Below is our initial mockup of the project:
 
-![wireframe](./docs/wireframe.jpg)
+![wireframe](./docs/wireframe1.png)
 
 We used this to guide our decisions on page structure, component architecture, and initial MVP.
 
@@ -32,7 +32,7 @@ When the user opens the page they are presented with the following elements:
 Since we achieved our initial MVP fairly quickly, we decided to introduce some additional functionality:
 
 - Navbar, which now contains a link to our "About" page.
-- Search Bar now allows users to search by body type, muscle group, and equipment, and search bar displays a category separator.
+- Search Bar now allows users to search by body type, muscle group, and equipment, and search bar displays a category separator. Users can either scroll through the list of categories, or they can type and see result suggestions that match.
   - User is now able to click on each of the search results and trigger a modal that displays exercise details.
 
 ## Tools
@@ -53,9 +53,13 @@ Once the repository is on your local machine, navigate to its location and run `
 
 Finally, run `npm start` to run the project in development mode and you should be able to now see it on your browser.
 
-## Live
+## Live Deployed Version of Project
 
-Deployed version of this project can be seen [here](https://sparkling-jalebi-c54467.netlify.app/).
+Deployed version of this project can be seen [here](https://avocardio.netlify.app/).
+
+## Project Demo
+
+![demo](./docs/avocardio.gif)
 
 ## Project Presentation
 
