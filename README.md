@@ -32,7 +32,7 @@ When the user opens the page they are presented with the following elements:
 Since we achieved our initial MVP fairly quickly, we decided to introduce some additional functionality:
 
 - Navbar, which now contains a link to our "About" page.
-- Search Bar now allows users to search by body type, muscle group, and equipment, and search bar displays a category separator.
+- Search Bar now allows users to search by body type, muscle group, and equipment, and search bar displays a category separator. Users can either scroll through the list of categories, or they can type and see result suggestions that match.
   - User is now able to click on each of the search results and trigger a modal that displays exercise details.
 
 ## Tools
@@ -56,6 +56,10 @@ Finally, run `npm start` to run the project in development mode and you should b
 ## Live
 
 Deployed version of this project can be seen [here](https://sparkling-jalebi-c54467.netlify.app/).
+
+## Project Demo
+
+![demo](./docs/avocardio.gif)
 
 ## Project Presentation
 
