@@ -53,9 +53,9 @@ Once the repository is on your local machine, navigate to its location and run `
 
 Finally, run `npm start` to run the project in development mode and you should be able to now see it on your browser.
 
-## Live
+## Live Deployed Version of Project
 
-Deployed version of this project can be seen [here](https://sparkling-jalebi-c54467.netlify.app/).
+Deployed version of this project can be seen [here](https://avocardio.netlify.app/).
 
 ## Project Demo
 
