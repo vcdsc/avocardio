@@ -14,7 +14,7 @@ Search results are return in GIF format, that the user can easily follow along.
 
 Below is our initial mockup of the project:
 
-![wireframe](./docs/wireframe.jpg)
+![wireframe](./docs/wireframe1.png)
 
 We used this to guide our decisions on page structure, component architecture, and initial MVP.
 
